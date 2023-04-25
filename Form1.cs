@@ -15,15 +15,20 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = tabla.Rows.Add();
+             
             String nombre = textBox1.Text;
 
             if (nombre == "")
             {
+               
                 MessageBox.Show("Bad input!", "Alert!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            tabla.Rows[n].Cells[0].Value = nombre;
+            else
+            {
+                int n = tabla.Rows.Add();
+                tabla.Rows[n].Cells[0].Value = nombre;
 
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
